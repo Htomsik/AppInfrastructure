@@ -10,6 +10,8 @@
         <Description>This package is created to help me and some people create different Wpf, Avalonia or other types apps.</Description>
         <PackageIcon>Nuget.ico</PackageIcon>
         <PackageTags>WPF</PackageTags>
+        <RepositoryUrl>https://github.com/Htomsik/AppInfrastructure</RepositoryUrl>
+        <RepositoryType>Open</RepositoryType>
     </PropertyGroup>
 
 </Project>
