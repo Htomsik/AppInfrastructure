@@ -8,7 +8,7 @@ public class BaseLazyStore<TValue> : BaseLazyStore, IStore<TValue>
 {
     #region CurrentValue
     
-    public new  TValue? CurrentValue
+    public new virtual TValue? CurrentValue
     {
         get => (TValue?)_currentValue.Value;
         set
@@ -36,7 +36,7 @@ public class BaseLazyStore : IStore
 
     protected Lazy<object?> _currentValue = new (()=>default);
     
-    public object? CurrentValue
+    public virtual object? CurrentValue
     {
         get => _currentValue.Value;
         set
@@ -50,7 +50,7 @@ public class BaseLazyStore : IStore
 
     #region CurrentValueChangedNotifier
 
-    protected void OnCurrentValueChanged() =>  CurrentValueChangedNotifier?.Invoke();
+    protected virtual void OnCurrentValueChanged() =>  CurrentValueChangedNotifier?.Invoke();
     public event Action? CurrentValueChangedNotifier;
 
     #endregion
