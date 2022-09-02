@@ -1,7 +1,7 @@
 ﻿namespace AppInfrastructure.Stores.DefaultStore;
 
 /// <summary>
-///     Base Lazy Realize for IStore.
+///     Base lazy generic realize for IStore.
 /// </summary>
 /// <typeparam name="TValue">Value with some type</typeparam>
 public class BaseLazyStore<TValue> : BaseLazyStore, IStore<TValue>
@@ -30,6 +30,9 @@ public class BaseLazyStore<TValue> : BaseLazyStore, IStore<TValue>
     
 }
 
+/// <summary>
+///     Base lazy realize for IStore.
+/// </summary>
 public class BaseLazyStore : IStore
 {
     #region CurrentValue
@@ -64,3 +67,4 @@ public class BaseLazyStore : IStore
     #endregion
     
 }
+
