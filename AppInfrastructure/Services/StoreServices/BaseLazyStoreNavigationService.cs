@@ -12,13 +12,13 @@ public class BaseLazyStoreNavigationService : INavigationServices
 
     protected readonly Lazy<IStore>  Store;
 
-    protected readonly object CreatableNewStoreValue;
+    protected readonly Lazy<Func<object>>  CreatableNewStoreValue;
 
     #endregion
 
     #region Methods
 
-    public void Navigate() => Store.Value.CurrentValue = CreatableNewStoreValue;
+    public void Navigate() => Store.Value.CurrentValue = CreatableNewStoreValue.Value();
 
     #endregion
 
@@ -32,7 +32,7 @@ public class BaseLazyStoreNavigationService : INavigationServices
             
         CreatableNewStoreValue = creatableNewStoreValue is null
             ? throw new ArgumentNullException(nameof(creatableNewStoreValue))
-            :new Lazy<object>(() => creatableNewStoreValue);
+            :new Lazy<Func<object>>(() => creatableNewStoreValue);
     }
     #endregion
 }
