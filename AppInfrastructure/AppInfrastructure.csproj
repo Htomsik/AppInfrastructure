@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackageId>LiteApp</PackageId>
+        <PackageVersion>0.0.1</PackageVersion>
+        <Authors>JessJake</Authors>
+        <Description>This package is created to help me and some people create different Wpf, Avalonia or other types apps.</Description>
+        <PackageIcon>Nuget.ico</PackageIcon>
+        <PackageTags>WPF</PackageTags>
+    </PropertyGroup>
+
+</Project>
