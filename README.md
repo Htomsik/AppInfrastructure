@@ -6,7 +6,7 @@
 > 
 > I  don' have mentors and don't know how right do it. 
 > 
-> It's a problem for me because all what i do doesn't reviewing and many mistakes that i do could be avoid if i ave mentor.
+> It's a problem for me because all what i do doesn't reviewing and many mistakes that i do could be avoid if i have mentor.
 > 
 > If i do something wrong u can say me about that. I will be grateful to you.
 
