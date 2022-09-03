@@ -11,7 +11,7 @@
     "C:\\Users\\JessJake\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "0.0.2",
+    "version": "0.0.5",
     "restore": {
       "projectUniqueName": "C:\\Users\\JessJake\\RiderProjects\\AppInfrastructure\\AppInfrastructure\\AppInfrastructure.csproj",
       "projectName": "LiteApp",
