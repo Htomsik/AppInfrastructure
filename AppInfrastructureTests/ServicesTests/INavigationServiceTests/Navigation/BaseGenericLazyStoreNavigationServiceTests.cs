@@ -1,8 +1,8 @@
 ﻿using AppInfrastructure.Services.StoreServices;
 using AppInfrastructure.Stores.DefaultStore;
-using AppInfrastructureTests.ServicesTests.Base;
+using AppInfrastructureTests.ServicesTests.INavigationServiceTests.Base;
 
-namespace AppInfrastructureTests.ServicesTests;
+namespace AppInfrastructureTests.ServicesTests.INavigationServiceTests.Navigation;
 
 [TestClass]
 public class BaseGenericLazyStoreNavigationServiceTests:BaseAbstractLazyStoreNavigationServiceTests<BaseLazyStore<string>,BaseLazyStoreNavigationService<string>,string>

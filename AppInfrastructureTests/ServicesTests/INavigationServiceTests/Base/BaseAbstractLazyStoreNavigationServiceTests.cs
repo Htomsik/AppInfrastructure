@@ -1,7 +1,7 @@
 ﻿using AppInfrastructure.Services.NavigationServices.Navigation;
 using AppInfrastructure.Stores.DefaultStore;
 
-namespace AppInfrastructureTests.ServicesTests.Base;
+namespace AppInfrastructureTests.ServicesTests.INavigationServiceTests.Base;
 
 
 public abstract class BaseAbstractLazyStoreNavigationServiceTests<TStore,TNavService,TValue> 
