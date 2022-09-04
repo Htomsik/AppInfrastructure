@@ -69,7 +69,13 @@ public class BaseLazyCustomDefaultStore<TValue> : BaseLazyCustomDefaultStore, IS
 
     public new virtual TValue? CurrentValue
     {
-        get => (TValue?)(((TValue)_currentValue.Value).Equals(default) ? DefaultValue : _currentValue.Value);
+        get
+        {
+            if (_currentValue?.Value is null) 
+                return (TValue?)DefaultValue;
+         
+            return (TValue?)(((TValue?)_currentValue?.Value).Equals(default) ? DefaultValue : _currentValue.Value);
+        }
         set
         {
             _currentValue =  new Lazy<object?>(() => value);
