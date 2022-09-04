@@ -11,11 +11,13 @@
 > If i do something wrong u can say me about that. I will be grateful to you.
 
 
-## Main Idea:
+# Main Idea:
 
-### Main idea that i use on all my latest Wpf (MvvM) project is separation project on units:
+## Main idea that i use on all my latest Wpf (MvvM) project is separation project on units:
 
-#### 1. Stores - store information and notify when it changes.
+### 1. Stores 
+
+> store information and notify when it changes.
 
 <details>
   <summary>Store example</summary>
@@ -67,7 +69,9 @@
 
 </details>
 
-#### 2. Services - process some information. Usually working with stores.
+### 2. Services
+
+> process some information. Usually working with stores.
 
 <details>
   <summary>Services example</summary>
@@ -93,12 +97,64 @@
 
 </details>
 
-#### 3. Repository - Store + service. It store information and allows more action that service.
+ #### Current services types:
+
+- ICloseService: <- Close something
+  - methods :
+    - void close() 
+
+
+- INavigationService: <- Navigate something
+  - methods :
+    - void Navigate() 
+
+
+- IFullNavigationService: INavigationService + ICloseService based
+  - methods :
+    - void Navigate() 
+    - void close() 
+
+
+- IParamNavigationService: <- Navigate something with Generic parameter
+  - methods :
+    - void Navigate(TValue parameter)
+
+
+- IFullParamNavigationService: IParamNavigationService + ICloseService based
+  - methods :
+    - void Navigate(TValue parameter)
+    - void close()
+
+
+### 3. Magazines
+
+>IFullParamNavigationService based specific service that navigation by search something in collations dictionaries and put it in Store.
+
+
+#### To better understand what i mean:
+
+<details>
+  <summary>Image</summary>
+
+![Alt text](https://raw.githubusercontent.com/Htomsik/AppInfrastructure/master/AppInfrastructure/Resources/Structures/Magazine/Magazine.png)
+
+</details>
+
+#### Current magazines types:
+
+- BaseLazyMagazineNavigationService: IParamNavigationService  based
+- BaseLazyMagazineFullNavigationService : IFullParamNavigationService based
+
+
+### 4. Repository 
+
+> Store + service. It store information and allows more action that service.
 
 <details>
   <summary>Repository example</summary>
 
 > Example and Repositories will be adding in newest realeses
 
-
 </details>
+
+
