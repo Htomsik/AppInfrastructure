@@ -8,7 +8,7 @@ namespace AppInfrastructure.Services.NavigationServices.Navigation;
 public interface INavigationServices
 {
     /// <summary>
-    ///     Navigating method
+    ///     Navigation method
     /// </summary>
     void Navigate();
     

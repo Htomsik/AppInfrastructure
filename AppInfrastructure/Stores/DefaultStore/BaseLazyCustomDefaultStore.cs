@@ -44,8 +44,8 @@ public class BaseLazyCustomDefaultStore : BaseLazyStore
 /// <summary>
 ///      Base lazy generic realize for IStore with custom default parameter.
 /// </summary>
-/// <typeparam name="TValue"></typeparam>
-public class BaseLazyCustomDefaultStore<TValue> : BaseLazyCustomDefaultStore, IStore<TValue>
+/// <typeparam name="TValue">Some value with IEquatable</typeparam>
+public class BaseLazyCustomDefaultStore<TValue> : BaseLazyCustomDefaultStore, IStore<TValue>  where TValue : IEquatable<TValue>
 {
     #region Constructors
 
@@ -69,7 +69,7 @@ public class BaseLazyCustomDefaultStore<TValue> : BaseLazyCustomDefaultStore, IS
 
     public new virtual TValue? CurrentValue
     {
-        get => (TValue?)(_currentValue.Value ?? DefaultValue);
+        get => (TValue?)(((TValue)_currentValue.Value).Equals(default) ? DefaultValue : _currentValue.Value);
         set
         {
             _currentValue =  new Lazy<object?>(() => value);
