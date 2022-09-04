@@ -4,11 +4,11 @@ using AppInfrastructure.Stores.DefaultStore;
 namespace AppInfrastructure.Services.StoreServices.Parametrize;
 
 /// <summary>
-///     Base realization of IParametrizeNavigationService
+///     Base realization of IParamNavigationService
 /// </summary>
 /// <typeparam name="TInput">Input parameter</typeparam>
 /// <typeparam name="TOutput">Output parameter</typeparam>
-public class BaseLazyParametrizeNavigationService<TInput,TOutput>  : IParametrizeNavigationService<TInput>
+public class BaseLazyParamNavigationService<TInput,TOutput>  : IParamNavigationService<TInput>
 {
     #region Stores
 
@@ -20,7 +20,7 @@ public class BaseLazyParametrizeNavigationService<TInput,TOutput>  : IParametriz
     
     #region Constructors
 
-    public BaseLazyParametrizeNavigationService(Func<TInput,TOutput> navigationFunc,IStore<TOutput> store)
+    public BaseLazyParamNavigationService(IStore<TOutput> store,Func<TInput,TOutput> navigationFunc)
     {
         #region Properties and Fields Initializing
 

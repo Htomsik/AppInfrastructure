@@ -1,6 +1,4 @@
-﻿using AppInfrastructure.Services.NavigationServices.Close;
-
-namespace AppInfrastructure.Services.NavigationServices.Navigation;
+﻿namespace AppInfrastructure.Services.NavigationServices.Navigation;
 
 /// <summary>
 ///     Navigation service

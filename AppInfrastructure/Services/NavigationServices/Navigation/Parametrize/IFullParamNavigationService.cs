@@ -6,7 +6,7 @@ namespace AppInfrastructure.Services.NavigationServices.Navigation.Parametrize;
 ///  Full Navigation service with parameter
 /// </summary>
 /// <typeparam name="TValue"></typeparam>
-public interface IFullParametrizeNavigationService<TValue> : IParametrizeNavigationService<TValue>, ICloseServices
+public interface IFullParamNavigationService<TValue> : IParamNavigationService<TValue>, ICloseServices
 {
     
 }

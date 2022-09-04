@@ -4,11 +4,11 @@ using AppInfrastructure.Stores.DefaultStore;
 namespace AppInfrastructure.Services.StoreServices.Parametrize.Magazine;
 
 /// <summary>
-///     Magazine service based on IParametrizeNavigationService
+///     Magazine service based on IParamNavigationService
 /// </summary>
 /// <typeparam name="TInput">Input parameter</typeparam>
 /// <typeparam name="TOutput">Output parameter</typeparam>
-public class BaseLazyMagazineNavigationService<TInput,TOutput> : IParametrizeNavigationService<TInput>
+public class BaseLazyMagazineNavigationService<TInput,TOutput> : IParamNavigationService<TInput>
 {
     
     #region Properties and fields
