@@ -11,13 +11,13 @@
     "C:\\Users\\JessJake\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "0.0.6",
+    "version": "0.0.7",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JessJake\\RiderProjects\\AppInfrastructure\\AppInfrastructure\\AppInfrastructure.csproj",
+      "projectUniqueName": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructure\\AppInfrastructure.csproj",
       "projectName": "LiteApp",
-      "projectPath": "C:\\Users\\JessJake\\RiderProjects\\AppInfrastructure\\AppInfrastructure\\AppInfrastructure.csproj",
+      "projectPath": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructure\\AppInfrastructure.csproj",
       "packagesPath": "C:\\Users\\JessJake\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JessJake\\RiderProjects\\AppInfrastructure\\AppInfrastructure\\obj\\",
+      "outputPath": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JessJake\\AppData\\Roaming\\NuGet\\NuGet.Config"

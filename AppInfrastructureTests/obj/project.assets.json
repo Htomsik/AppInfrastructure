@@ -1661,7 +1661,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "LiteApp/0.0.6": {
+      "LiteApp/0.0.7": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
@@ -6208,7 +6208,7 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "LiteApp/0.0.6": {
+    "LiteApp/0.0.7": {
       "type": "project",
       "path": "../AppInfrastructure/AppInfrastructure.csproj",
       "msbuildProject": "../AppInfrastructure/AppInfrastructure.csproj"
@@ -6216,7 +6216,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "LiteApp >= 0.0.6",
+      "LiteApp >= 0.0.7",
       "MSTest.TestAdapter >= 2.2.8",
       "MSTest.TestFramework >= 2.2.8",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
@@ -6229,11 +6229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JessJake\\RiderProjects\\AppInfrastructure\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
+      "projectUniqueName": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
       "projectName": "AppInfrastructureTests",
-      "projectPath": "C:\\Users\\JessJake\\RiderProjects\\AppInfrastructure\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
+      "projectPath": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
       "packagesPath": "C:\\Users\\JessJake\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JessJake\\RiderProjects\\AppInfrastructure\\AppInfrastructureTests\\obj\\",
+      "outputPath": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructureTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JessJake\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6248,8 +6248,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\JessJake\\RiderProjects\\AppInfrastructure\\AppInfrastructure\\AppInfrastructure.csproj": {
-              "projectPath": "C:\\Users\\JessJake\\RiderProjects\\AppInfrastructure\\AppInfrastructure\\AppInfrastructure.csproj"
+            "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructure\\AppInfrastructure.csproj": {
+              "projectPath": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructure\\AppInfrastructure.csproj"
             }
           }
         }

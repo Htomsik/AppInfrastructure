@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+b03mJrDjZXKrHno1R3nT2n/4aoSxFNVvzo+tAP6Xk0nO+r56BivYdHUXUfmeqg/7sUDyX4DspuWrSr7JJV4Mg==",
+  "dgSpecHash": "39Zi3pK34AyozvrV4hzc1BprUNh8yn9At7Wr/tnHO8gnmVZ3wFnm1cEWnebAtVdLEBGJueCQEyF85b4PI5icXA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\JessJake\\RiderProjects\\AppInfrastructure\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
+  "projectFilePath": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JessJake\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\JessJake\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
@@ -91,7 +91,8 @@
     "C:\\Users\\JessJake\\.nuget\\packages\\system.threading.tasks.extensions\\4.3.0\\system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\JessJake\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\JessJake\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\JessJake\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\JessJake\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\JessJake\\.nuget\\packages\\liteapp\\0.0.7\\liteapp.0.0.7.nupkg.sha512"
   ],
   "logs": []
 }
