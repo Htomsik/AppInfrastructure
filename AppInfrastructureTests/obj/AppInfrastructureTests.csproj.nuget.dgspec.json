@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructureTests\\AppInfrastructureTests.csproj": {}
+    "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructureTests\\AppInfrastructureTests.csproj": {}
   },
   "projects": {
-    "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructureTests\\AppInfrastructureTests.csproj": {
+    "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructureTests\\AppInfrastructureTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
+        "projectUniqueName": "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
         "projectName": "AppInfrastructureTests",
-        "projectPath": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
+        "projectPath": "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
         "packagesPath": "C:\\Users\\JessJake\\.nuget\\packages\\",
-        "outputPath": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructureTests\\obj\\",
+        "outputPath": "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructureTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JessJake\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructure\\AppInfrastructure.csproj": {
-                "projectPath": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructure\\AppInfrastructure.csproj"
+              "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructure\\AppInfrastructure.csproj": {
+                "projectPath": "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructure\\AppInfrastructure.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructure\\AppInfrastructure.csproj": {
+    "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructure\\AppInfrastructure.csproj": {
       "version": "0.0.7",
       "restore": {
-        "projectUniqueName": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructure\\AppInfrastructure.csproj",
+        "projectUniqueName": "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructure\\AppInfrastructure.csproj",
         "projectName": "LiteApp",
-        "projectPath": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructure\\AppInfrastructure.csproj",
+        "projectPath": "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructure\\AppInfrastructure.csproj",
         "packagesPath": "C:\\Users\\JessJake\\.nuget\\packages\\",
-        "outputPath": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructure\\obj\\",
+        "outputPath": "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JessJake\\AppData\\Roaming\\NuGet\\NuGet.Config"

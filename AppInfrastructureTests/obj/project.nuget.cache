@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "39Zi3pK34AyozvrV4hzc1BprUNh8yn9At7Wr/tnHO8gnmVZ3wFnm1cEWnebAtVdLEBGJueCQEyF85b4PI5icXA==",
+  "dgSpecHash": "QUHXcRpQh4/GDP1lRoermwH4xzbZOG6hjbSp/8pBEKqMz1Xvw9/3Kr123d2+962EDP5lEN4/j1+wV3yMjBx0Vg==",
   "success": true,
-  "projectFilePath": "E:\\Systems\\Desktop\\LiteAppNuget\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
+  "projectFilePath": "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JessJake\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\JessJake\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

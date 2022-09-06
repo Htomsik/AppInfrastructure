@@ -1,160 +1,64 @@
-# AppInfrastructure
-
-> P.S 
-> 
->I'm a begining .Net programmer and It's my vision in creating Wpf and AvaloniaUI mvvm app infrastructure. 
-> 
-> I  don' have mentors and don't know how right do it. 
-> 
-> It's a problem for me because all what i do doesn't reviewing and many mistakes that i do could be avoid if i have mentor.
-> 
-> If i do something wrong u can say me about that. I will be grateful to you.
 
 
-# Main Idea:
+<div id="top"></div>
 
-## Main idea that i use on all my latest Wpf (MvvM) project is separation project on units:
-
-### 1. Stores 
-
-> store information and notify when it changes.
-
-<details>
-  <summary>Store example</summary>
-
-    public interface IStore
-    {
-   
-        object? CurrentValue { get; set; } 
-
-        //  Notify when value changed  
-        event Action? CurrentValueChangedNotifier;  
-    }
-
-    // Simple relalization of IStore
-    public class SimpleStore : IStore
-    {
-
-        private object? _currentValue;
-    
-        public object? CurrentValue
-        {
-            get => _currentValue;
-            set
-            {
-                _currentValue = value;
-                CurrentValueChangedNotifier?.Invoke();
-            }
-        }
-
-        public event Action? CurrentValueChangedNotifier;
-    }
-
-    //example in Wpf app when store getting from outer sources (ex: IOC container/ other class etc)
-    Public class example
-    {
-        private readonly IStore _simpleStore;
-        
-        //Getting information from store
-        public object SomeInformation => _simpleStore.CurrentValue;
-            
-        public example(IStore simpleStore)
-        {
-            _simpleStore = simplestore;
-            
-            //When value changing notifier retranslating in INPC
-            _sinpleStore.CurrentValueChangedNotifier += () => OnPropertyChanged(nameof(SomeInformation)); 
-        }
-    }
-
-</details>
-
-### 2. Services
-
-> process some information. Usually working with stores.
-
-<details>
-  <summary>Services example</summary>
-    
-    //Something close service
-    Public interface ICloseService
-    {
-        void Close();
-    }
-
-    //Simple close services that deleted value in store.
-    public class SimpleStoreCloseServices
-    {
-        private readonly IStore _simpleStore;
-
-        public SimpleStoreCloseServices(IStore simpleStore)
-        {
-            _simpleStore = simpleStore;
-        }
-
-        public void Close() => _simpleStore.CurrentValue = null;
-    }
-
-</details>
-
- #### Current services types:
-
-- ICloseService: <- Close something
-  - methods :
-    - void close() 
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![NugetDownloads][NugetDowload-shield]][Nuget-url]
 
 
-- INavigationService: <- Navigate something
-  - methods :
-    - void Navigate() 
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a>
+    <img src="https://raw.githubusercontent.com/Htomsik/Htomsik/main/Assets/ProileReadme/icon_cat.png" alt="Logo" width="200">
+  </a>
+
+<h3 align="center">liteApp</h3>
+
+  <p align="center">
+
+[![Nuget][Nuget-shield]][Nuget-url]
+
+  </p>
+</div>
 
 
-- IFullNavigationService: INavigationService + ICloseService based
-  - methods :
-    - void Navigate() 
-    - void close() 
+# Summary
 
+* LiteApp is a kit of supporting modules in building MVVM Net applications.
+* Main Idea of LiteApp it's detachment of re-used modules which working with data.
 
-- IParamNavigationService: <- Navigate something with Generic parameter
-  - methods :
-    - void Navigate(TValue parameter)
+> P.S:
+> * I'm a begining .Net programmer and It's my vision in creating Wpf and AvaloniaUI mvvm app infrastructure.
+> * I don' have mentors and don't know how right do it.
+> * It's a problem for me because all what i do doesn't reviewing and many mistakes that i do could be avoid if i have mentor.
+> * If i do something wrong u can say me about that. I will be grateful to you.
 
+# Getting Started
+* Checkout the [Wiki](https://github.com/Htomsik/LiteApp/wiki)
 
-- IFullParamNavigationService: IParamNavigationService + ICloseService based
-  - methods :
-    - void Navigate(TValue parameter)
-    - void close()
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/Htomsik/LiteApp.svg?style=for-the-badge
+[contributors-url]: https://github.com/Htomsik/LiteApp/graphs/contributors
 
+[forks-shield]: https://img.shields.io/github/forks/Htomsik/LiteApp.svg?style=for-the-badge
+[forks-url]: https://github.com/Htomsik/LiteApp/network/members
 
-### 3. Magazines
+[stars-shield]: https://img.shields.io/github/stars/Htomsik/LiteApp.svg?style=for-the-badge
+[stars-url]: https://github.com/Htomsik/LiteApp/stargazers
 
->IFullParamNavigationService based specific service that navigation by search something in collations dictionaries and put it in Store.
+[issues-shield]: https://img.shields.io/github/issues/Htomsik/LiteApp.svg?style=for-the-badge
+[issues-url]: https://github.com/othneildrew/Htomsik/LiteApp
 
+[license-shield]: https://img.shields.io/github/license/Htomsik/LiteApp.svg?style=for-the-badge
+[license-url]: https://github.com/Htomsik/LiteApp/blob/master/LICENSE.txt
 
-#### To better understand what i mean:
+[Nuget-shield]:https://img.shields.io/nuget/v/LiteApp.svg?style=for-the-badge
+[Nuget-url]:https://www.nuget.org/packages/LiteApp/
 
-<details>
-  <summary>Image</summary>
-
-![Alt text](https://raw.githubusercontent.com/Htomsik/AppInfrastructure/master/AppInfrastructure/Resources/Structures/Magazine/Magazine.png)
-
-</details>
-
-#### Current magazines types:
-
-- BaseLazyMagazineNavigationService: IParamNavigationService  based
-- BaseLazyMagazineFullNavigationService : IFullParamNavigationService based
-
-
-### 4. Repository 
-
-> Store + service. It store information and allows more action that service.
-
-<details>
-  <summary>Repository example</summary>
-
-> Example and Repositories will be adding in newest realeses
-
-</details>
-
-
+[NugetDowload-shield]:https://img.shields.io/nuget/dt/LiteApp.svg?style=for-the-badge
