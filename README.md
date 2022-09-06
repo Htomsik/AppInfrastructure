@@ -27,7 +27,6 @@
   </p>
 </div>
 
-
 # Summary
 
 * LiteApp is a kit of supporting modules in building MVVM Net applications.
@@ -41,6 +40,16 @@
 
 # Getting Started
 * Checkout the [Wiki](https://github.com/Htomsik/LiteApp/wiki)
+
+# Creators
+<details>
+  <summary>List of creators</summary>
+<h1 align="center">Kifirka</h1>
+<img src="https://raw.githubusercontent.com/Htomsik/Htomsik/main/Assets/ProileReadme/Chifirka.png">
+</details>
+
+# Contact
+[![Konstantin](https://img.shields.io/badge/Konstantin-090909?style=for-the-badge&logo=vk&logoColor=red)](https://vk.com/jessnjake)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/Htomsik/LiteApp.svg?style=for-the-badge
