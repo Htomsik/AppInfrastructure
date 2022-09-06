@@ -15,7 +15,7 @@
 <br />
 <div align="center">
   <a>
-    <img src="https://raw.githubusercontent.com/Htomsik/Htomsik/main/Assets/ProileReadme/icon_cat.png" alt="Logo" width="200">
+    <img src="https://raw.githubusercontent.com/Htomsik/Htomsik/main/Assets/ProileReadme/icon_cat.png" alt="Logo">
   </a>
 
 <h3 align="center">liteApp</h3>
