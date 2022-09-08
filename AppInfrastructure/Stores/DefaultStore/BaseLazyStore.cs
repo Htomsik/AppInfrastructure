@@ -45,6 +45,10 @@ public class BaseLazyStore : IStore
         set
         {
             _currentValue =  new Lazy<object?>(() => value);
+            
+            if(value is null || value == default)
+                OnCurrentValueDeleted();
+            
             OnCurrentValueChanged();
         }
     }
@@ -55,6 +59,13 @@ public class BaseLazyStore : IStore
 
     protected virtual void OnCurrentValueChanged() =>  CurrentValueChangedNotifier?.Invoke();
     public event Action? CurrentValueChangedNotifier;
+    
+    #endregion
+    
+    #region CurrentValueDeletedNotifier
+
+    protected virtual void OnCurrentValueDeleted() =>  CurrentValueDeletedNotifier?.Invoke();
+    public event Action? CurrentValueDeletedNotifier;
 
     #endregion
 

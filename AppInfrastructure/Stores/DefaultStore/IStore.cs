@@ -24,4 +24,10 @@ public interface IStore
     ///     Notify when value is changed  
     /// </summary>
     event Action? CurrentValueChangedNotifier;
+    
+    
+    /// <summary>
+    ///     Notify when value is null or default 
+    /// </summary>
+    event Action? CurrentValueDeletedNotifier;
 }

@@ -26,4 +26,21 @@ public class BaseNotGenericLazyCustomDefaultStore : BaseAbstractLazyStoreTests<B
         //Assert
         Assert.AreEqual(Def,someStore.CurrentValue);
     }
+    
+    
+    [TestMethod]
+    public override void IsCurrentValueDeletedNotifierNotify()
+    {
+        //Arrange
+        var newValue = GenerateValue();
+
+        var someStore = GenerateStore();
+
+        //Act+Assert
+        someStore.CurrentValueDeletedNotifier += () => Assert.AreEqual(someStore.CurrentValue,Def);
+
+        someStore.CurrentValue = newValue;
+
+        someStore.CurrentValue = default;
+    }
 }

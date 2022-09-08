@@ -17,6 +17,10 @@ public class BaseLazyCustomDefaultStore : BaseLazyStore
         set
         {
             _currentValue = new Lazy<object?>(() => value);
+            
+            if(value is null || value == default)
+                OnCurrentValueDeleted();
+            
             OnCurrentValueChanged();
         }
     }
@@ -79,6 +83,10 @@ public class BaseLazyCustomDefaultStore<TValue> : BaseLazyCustomDefaultStore, IS
         set
         {
             _currentValue =  new Lazy<object?>(() => value);
+            
+            if(value is null || ((TValue?)value).Equals(default))
+                OnCurrentValueDeleted();
+            
             OnCurrentValueChanged();
         }
     }
