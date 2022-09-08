@@ -1661,7 +1661,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "LiteApp/0.0.7": {
+      "LiteApp/0.0.8": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
@@ -6208,7 +6208,7 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "LiteApp/0.0.7": {
+    "LiteApp/0.0.8": {
       "type": "project",
       "path": "../AppInfrastructure/AppInfrastructure.csproj",
       "msbuildProject": "../AppInfrastructure/AppInfrastructure.csproj"
@@ -6216,7 +6216,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "LiteApp >= 0.0.7",
+      "LiteApp >= 0.0.8",
       "MSTest.TestAdapter >= 2.2.8",
       "MSTest.TestFramework >= 2.2.8",
       "Microsoft.NET.Test.Sdk >= 17.1.0",

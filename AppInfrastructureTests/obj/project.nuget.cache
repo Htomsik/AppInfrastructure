@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QUHXcRpQh4/GDP1lRoermwH4xzbZOG6hjbSp/8pBEKqMz1Xvw9/3Kr123d2+962EDP5lEN4/j1+wV3yMjBx0Vg==",
+  "dgSpecHash": "afRQ2bMBa9g3c/uuzwHkb8y6l9VpL6SJwOk811K8m4MSel/PMvp6t4xFRziyW/qEw+r8VPeuIQl7fAr3kZ3SGA==",
   "success": true,
   "projectFilePath": "E:\\Systems\\Desktop\\LiteApp\\AppInfrastructureTests\\AppInfrastructureTests.csproj",
   "expectedPackageFiles": [
@@ -92,7 +92,7 @@
     "C:\\Users\\JessJake\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\JessJake\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\JessJake\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\JessJake\\.nuget\\packages\\liteapp\\0.0.7\\liteapp.0.0.7.nupkg.sha512"
+    "C:\\Users\\JessJake\\.nuget\\packages\\liteapp\\0.0.8\\liteapp.0.0.8.nupkg.sha512"
   ],
   "logs": []
 }
