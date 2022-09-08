@@ -4,7 +4,7 @@ using AppInfrastructure.Stores.DefaultStore;
 namespace AppInfrastructure.Stores.Repositories;
 
 /// <summary>
-///     Reository
+///     Repository
 /// </summary>
 public interface IRepository : IStore, ICloseServices
 {

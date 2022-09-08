@@ -10,10 +10,14 @@ public class BaseLazyStore<TValue> : BaseLazyStore, IStore<TValue>
     
     public new virtual TValue? CurrentValue
     {
-        get => (TValue?)_currentValue.Value;
+        get => (TValue?)(_currentValue.Value ?? default);
         set
         {
             _currentValue =  new Lazy<object?>(() => value);
+            
+            if(value is null || value.Equals(default))
+                OnCurrentValueDeleted();
+            
             OnCurrentValueChanged();
         }
     }
@@ -26,8 +30,10 @@ public class BaseLazyStore<TValue> : BaseLazyStore, IStore<TValue>
 
     public BaseLazyStore(){}
 
+
+
     #endregion
-    
+
 }
 
 /// <summary>
@@ -46,7 +52,7 @@ public class BaseLazyStore : IStore
         {
             _currentValue =  new Lazy<object?>(() => value);
             
-            if(value is null || value == default)
+            if(value is null || value.Equals(default))
                 OnCurrentValueDeleted();
             
             OnCurrentValueChanged();

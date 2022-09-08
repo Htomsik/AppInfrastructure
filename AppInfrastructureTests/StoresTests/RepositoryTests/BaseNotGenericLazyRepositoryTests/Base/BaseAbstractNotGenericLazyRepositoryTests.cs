@@ -1,10 +1,9 @@
-﻿using AppInfrastructure.Stores.DefaultStore;
-using AppInfrastructure.Stores.Repositories;
+﻿using AppInfrastructure.Stores.Repositories;
 using AppInfrastructureTests.StoresTests.StoreTests.Base;
 
-namespace AppInfrastructureTests.StoresTests.RepositoryTests.Base;
+namespace AppInfrastructureTests.StoresTests.RepositoryTests.BaseNotGenericLazyRepositoryTests.Base;
 
-public abstract class BaseAbstractLazyRepositoryTests<TRepository,TValue>:BaseAbstractLazyStoreTests<TRepository,TValue>
+public abstract class BaseAbstractNotGenericLazyRepositoryTests<TRepository,TValue>:BaseAbstractLazyStoreTests<TRepository,TValue>
     where TRepository : IRepository
 {
     protected override abstract TRepository GenerateStore();

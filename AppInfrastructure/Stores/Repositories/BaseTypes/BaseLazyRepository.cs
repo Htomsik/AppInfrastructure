@@ -80,6 +80,14 @@ public class BaseLazyRepository : BaseLazyStore, IRepository
     public void Close() => CurrentValue = default;
     
     #endregion
+
+    #region Constructors
+
+    public BaseLazyRepository(object value) : base(value){}
+
+    public BaseLazyRepository(){}
+
+    #endregion
 }
 
 /// <summary>
@@ -94,28 +102,29 @@ public class BaseLazyRepository<TValue> : BaseLazyStore<TValue>, IRepository<TVa
 
     public bool Add(TValue value)
     {
-        bool IsAdded;
+        bool isAdded;
             
         try
         {
-            IsAdded = add(value);
+            isAdded = add(value);
         }
         catch (Exception)
         {
-            IsAdded = false;
+            isAdded = false;
         }
 
-        return IsAdded;
+        return isAdded;
     }
     
     /// <summary>
     ///     Add method for child.
     ///     Base: Set CurrentValue = value if CurrentValue != value
     /// </summary>
-    /// <param name="value">Removed value</param>
+    /// <param name="value">Added value</param>
     protected virtual bool add(TValue value)
     {
-        if (!CurrentValue.Equals(value))
+        
+        if (_currentValue.Value is null || !_currentValue.Value.Equals(value))
         {
             CurrentValue = value;
             return true;
@@ -150,11 +159,12 @@ public class BaseLazyRepository<TValue> : BaseLazyStore<TValue>, IRepository<TVa
     /// <param name="value">Removed value</param>
     protected virtual bool remove(TValue value)
     {
-        if (CurrentValue.Equals(value))
+        if ((bool)_currentValue?.Value?.Equals(value))
         {
             Close();
             return true;
         }
+        
         return false;
     }
 
@@ -162,6 +172,14 @@ public class BaseLazyRepository<TValue> : BaseLazyStore<TValue>, IRepository<TVa
     
     public void Close() => CurrentValue = default;
     
+    #endregion
+    
+    #region Constructors
+
+    public BaseLazyRepository(TValue value) : base(value){}
+
+    public BaseLazyRepository(){}
+
     #endregion
 }
 
