@@ -2,7 +2,7 @@ name: Testing
 
 on:
   push:
-    branches: [ "Core" ]
+    branches: [ "Core","master" ]
   pull_request:
     branches: [ "master" ]
 
