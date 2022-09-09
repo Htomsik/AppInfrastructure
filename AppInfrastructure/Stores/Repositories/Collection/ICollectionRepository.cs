@@ -1,8 +1,6 @@
-﻿
+﻿using AppInfrastructure.Stores.Repositories.BaseTypes;
 
-using System.Collections;
-
-namespace AppInfrastructure.Stores.Repositories;
+namespace AppInfrastructure.Stores.Repositories.Collection;
 /// <summary>
 ///       Repository generic (IEnumerable generic type)
 /// </summary>
@@ -10,6 +8,9 @@ namespace AppInfrastructure.Stores.Repositories;
 /// <typeparam name="TValue">Some value</typeparam>
 public interface ICollectionRepository<TCollection, TValue> : IRepository<TCollection> where TCollection : ICollection<TValue>
 { 
+    
+    new TCollection CurrentValue { get; set; }
+    
     /// <summary>
     ///     Find some value in store by some parameter
     /// </summary>

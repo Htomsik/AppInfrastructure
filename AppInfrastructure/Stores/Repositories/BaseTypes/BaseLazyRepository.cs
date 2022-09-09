@@ -1,6 +1,6 @@
 ﻿using AppInfrastructure.Stores.DefaultStore;
 
-namespace AppInfrastructure.Stores.Repositories;
+namespace AppInfrastructure.Stores.Repositories.BaseTypes;
 
 /// <summary>
 ///     Base lazy realize for iRepository.

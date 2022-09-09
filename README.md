@@ -33,7 +33,7 @@
 * Main Idea of LiteApp it's detachment of re-used modules which working with data.
 
 > P.S:
-> * I'm a begining .Net programmer and It's my vision in creating Wpf and AvaloniaUI mvvm app infrastructure.
+> * I'm a begining .Net programmer and it's my vision in creating Wpf and AvaloniaUI mvvm app infrastructure.
 > * I don' have mentors and don't know how right do it.
 > * It's a problem for me because all what i do doesn't reviewing and many mistakes that i do could be avoid if i have mentor.
 > * If i do something wrong u can say me about that. I will be grateful to you.

@@ -1,7 +1,7 @@
 ﻿using AppInfrastructure.Services.NavigationServices.Close;
 using AppInfrastructure.Stores.DefaultStore;
 
-namespace AppInfrastructure.Stores.Repositories;
+namespace AppInfrastructure.Stores.Repositories.BaseTypes;
 
 /// <summary>
 ///     Repository
@@ -30,6 +30,7 @@ public interface IRepository : IStore, ICloseServices
 /// <typeparam name="TValue">Some generic types</typeparam>
 public interface IRepository<TValue> :  IStore<TValue>, ICloseServices
 {
+    
     /// <summary>
     ///     Add some value from store
     /// </summary>

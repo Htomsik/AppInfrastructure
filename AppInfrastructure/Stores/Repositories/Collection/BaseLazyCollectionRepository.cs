@@ -1,7 +1,9 @@
-﻿namespace AppInfrastructure.Stores.Repositories;
+﻿using AppInfrastructure.Stores.Repositories.BaseTypes;
+
+namespace AppInfrastructure.Stores.Repositories.Collection;
 
 public class BaseLazyCollectionRepository<TCollection, TValue> : BaseLazyRepository<TCollection>, ICollectionRepository<TCollection, TValue>
-    where TCollection : ICollection<TValue>
+    where TCollection : ICollection<TValue>, new() 
 {
     #region Methods
     
@@ -71,18 +73,44 @@ public class BaseLazyCollectionRepository<TCollection, TValue> : BaseLazyReposit
     }
 
     #endregion
-    
-    public virtual TValue Find(TValue parameter) => Contains(parameter) ? CurrentValue.FirstOrDefault(parameter) : default;
 
-    public virtual bool Contains(TValue value) => (bool)CurrentValue?.FirstOrDefault(value)?.Equals(value);
+
+    public virtual TValue Find(TValue parameter) => Contains(parameter) ? CurrentValue.FirstOrDefault(item=>item.Equals(parameter),default) : default;
     
+    public virtual bool Contains(TValue value) =>(bool)CurrentValue?.Contains(value);
+    
+    
+    #endregion
+
+    #region Properties
+
+    public new TCollection? CurrentValue
+    {
+        get => (TCollection?)_currentValue?.Value;
+        set
+        {
+            _currentValue =  new Lazy<object?>(() => value);
+            
+            if(value is null || value.Equals(default))
+                OnCurrentValueDeleted();
+            
+            OnCurrentValueChanged();
+        }
+    }
+
     #endregion
 
     #region Constructors
 
-    public BaseLazyCollectionRepository(TCollection value) : base(value){}
+    public BaseLazyCollectionRepository(TCollection value) : base(value)
+    {
+        
+    }
 
-    public BaseLazyCollectionRepository(){}
+    public BaseLazyCollectionRepository() : this(new TCollection())
+    {
+        
+    }
 
     #endregion
 }

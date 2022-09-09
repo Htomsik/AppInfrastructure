@@ -8,7 +8,7 @@ public class BaseLazyStore<TValue> : BaseLazyStore, IStore<TValue>
 {
     #region CurrentValue
     
-    public new virtual TValue? CurrentValue
+    public new virtual TValue CurrentValue
     {
         get => (TValue?)(_currentValue.Value ?? default);
         set

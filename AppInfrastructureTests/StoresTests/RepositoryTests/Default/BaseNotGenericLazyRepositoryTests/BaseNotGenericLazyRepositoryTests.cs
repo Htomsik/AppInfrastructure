@@ -1,7 +1,7 @@
-﻿using AppInfrastructure.Stores.Repositories;
-using AppInfrastructureTests.StoresTests.RepositoryTests.BaseNotGenericLazyRepositoryTests.Base;
+﻿using AppInfrastructure.Stores.Repositories.BaseTypes;
+using AppInfrastructureTests.StoresTests.RepositoryTests.Default.BaseNotGenericLazyRepositoryTests.Base;
 
-namespace AppInfrastructureTests.StoresTests.RepositoryTests.BaseNotGenericLazyRepositoryTests;
+namespace AppInfrastructureTests.StoresTests.RepositoryTests.Default.BaseNotGenericLazyRepositoryTests;
 
 [TestClass]
 public class BaseNotGenericNotGenericLazyRepositoryTests : BaseAbstractNotGenericLazyRepositoryTests<BaseLazyRepository,object>
