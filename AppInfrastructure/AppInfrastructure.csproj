@@ -9,7 +9,7 @@
         <Authors>JessJake</Authors>
         <Description>This package is created to help me and some people create different Wpf, Avalonia or other types apps.</Description>
         <PackageIcon>Resources\Nuget.png</PackageIcon>
-        <PackageTags>WPF</PackageTags>
+        <PackageTags>WPF AvaloniaUI MVVM</PackageTags>
         <RepositoryUrl>https://github.com/Htomsik/AppInfrastructure</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageProjectUrl>https://github.com/Htomsik/AppInfrastructure</PackageProjectUrl>

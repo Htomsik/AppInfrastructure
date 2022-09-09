@@ -1,11 +1,10 @@
-﻿using AppInfrastructure.Stores.Repositories;
+﻿using AppInfrastructure.Stores.Repositories.BaseTypes;
 using AppInfrastructureTests.StoresTests.StoreTests.Base;
 
-namespace AppInfrastructureTests.StoresTests.RepositoryTests.BaseGenericLazyRepositoryTests.Base;
+namespace AppInfrastructureTests.StoresTests.RepositoryTests.Default.BaseNotGenericLazyRepositoryTests.Base;
 
-
-public abstract class BaseAbstractGenericLazyRepositoryTests<TRepository,TValue>:BaseAbstractLazyStoreTests<TRepository,TValue>
-    where TRepository : IRepository<TValue>
+public abstract class BaseAbstractNotGenericLazyRepositoryTests<TRepository,TValue>:BaseAbstractLazyStoreTests<TRepository,TValue>
+    where TRepository : IRepository
 {
     protected override abstract TRepository GenerateStore();
     
@@ -16,12 +15,12 @@ public abstract class BaseAbstractGenericLazyRepositoryTests<TRepository,TValue>
     public virtual void IsAddWorkingRight()
     {
         //Arrange
-        var someRepository = GenerateStore();
+        var SomeRepository = GenerateStore();
 
-        var someValue = GenerateValue();
+        var SomeValue = GenerateValue();
         
         //Act + Assert
-        IsAddWorkingRightChild(someRepository, someValue);
+        IsAddWorkingRightChild(SomeRepository, SomeValue);
 
     }
     

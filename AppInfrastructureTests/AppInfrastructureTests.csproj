@@ -19,4 +19,8 @@
       <ProjectReference Include="..\AppInfrastructure\AppInfrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="StoresTests\RepositoryTests\Default" />
+    </ItemGroup>
+
 </Project>
