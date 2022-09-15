@@ -90,7 +90,7 @@ public class BaseLazyCollectionRepository<TCollection, TValue> : BaseLazyReposit
 
     #region Properties
 
-    public new TCollection? CurrentValue
+    public new virtual TCollection? CurrentValue
     {
         get => (TCollection?)_currentValue?.Value;
         set
