@@ -64,6 +64,8 @@ where TCollection : ICollection<TValue>
     }
 
     #endregion
+    
+    #region IsValueFindingInCollectionRepository
 
     [TestMethod]
     public void IsValueFindingInCollectionRepository()
@@ -76,8 +78,8 @@ where TCollection : ICollection<TValue>
         var someCollectionRepo = GenerateStore();
         
         //Act+Assert
-       Assert.IsTrue(someCollectionRepo.AddIntoEnumerable(someFirstValue));
-       Assert.IsTrue( someCollectionRepo.AddIntoEnumerable(someSecondValue));
+        Assert.IsTrue(someCollectionRepo.AddIntoEnumerable(someFirstValue));
+        Assert.IsTrue( someCollectionRepo.AddIntoEnumerable(someSecondValue));
        
         IsValueFindingInCollectionRepositoryChild(someCollectionRepo, someFirstValue,someSecondValue);
     }
@@ -92,6 +94,55 @@ where TCollection : ICollection<TValue>
         Assert.AreEqual(secondValue,someCollectionRepo.Find(secondValue));
     }
 
-   
+    #endregion
+    
+    #region IsCurrentValuePropertyChangedWhenAddIntoCollection
+    
+    [TestMethod]
+    public void IsCurrentValuePropertyChangedWhenAddIntoCollection()
+    {
+        //Arrange
+        var isCurrentValueAdded = false;
+        
+        var someValue = GenerateFirstValueInCollection();
+        
+        var someCollectionRepo = GenerateStore();
+        
+        //Act
+        someCollectionRepo.CurrentValueChangedNotifier += ()=> isCurrentValueAdded = someCollectionRepo.Contains(someValue);
+            
+        someCollectionRepo.AddIntoEnumerable(someValue);
+        
+        //Assert
+        Assert.IsTrue(isCurrentValueAdded);
+    }
+    
+    #endregion
+
+    #region IsCurrentValuePropertyChangedWhenRemoveFromCollection
+    
+    [TestMethod]
+    public void IsCurrentValuePropertyChangedWhenRemoveFromCollection()
+    {
+        //Arrange
+        var isCurrentValueRemoved = false;
+        
+        var someValue = GenerateFirstValueInCollection();
+        
+        var someCollectionRepo = GenerateStore();
+
+        someCollectionRepo.AddIntoEnumerable(someValue);
+        
+        //Act
+        someCollectionRepo.CurrentValueChangedNotifier += ()=> isCurrentValueRemoved = !someCollectionRepo.Contains(someValue);
+            
+        someCollectionRepo.RemoveFromEnumerable(someValue);
+        
+        //Assert
+        Assert.IsTrue(isCurrentValueRemoved);
+    }
+
+
+    #endregion
     
 }

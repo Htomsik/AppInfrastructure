@@ -9,31 +9,40 @@ where TStore : IStore
     public void IsCurrentValueChangedNotifierNotify()
     {
         //Arrange
+        var isPropertyChanged = false;
+        
         TValue newValue = GenerateValue();
         
         TStore someStore = GenerateStore();
         
-        //Act+Assert
-        someStore.CurrentValueChangedNotifier += () => Assert.AreEqual(someStore.CurrentValue, newValue);
+        //Act
+        someStore.CurrentValueChangedNotifier += () => isPropertyChanged = true;
 
         someStore.CurrentValue = newValue;
 
+        //Assert
+        Assert.IsTrue(isPropertyChanged);
     }
     
     [TestMethod]
     public virtual void IsCurrentValueDeletedNotifierNotify()
     {
         //Arrange
+        var isPropertyDeleted = false;
+        
         TValue newValue = GenerateValue();
         
         TStore someStore = GenerateStore();
         
-        //Act+Assert
-        someStore.CurrentValueDeletedNotifier += () => Assert.IsNull(someStore.CurrentValue);
+        //Act
+        someStore.CurrentValueDeletedNotifier += () => isPropertyDeleted = true;
         
         someStore.CurrentValue = newValue;
         
         someStore.CurrentValue = null;
+        
+        //Assert
+        Assert.IsTrue(isPropertyDeleted);
         
     }
 

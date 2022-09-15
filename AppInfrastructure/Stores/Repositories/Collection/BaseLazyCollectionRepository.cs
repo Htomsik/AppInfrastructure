@@ -22,6 +22,9 @@ public class BaseLazyCollectionRepository<TCollection, TValue> : BaseLazyReposit
             isAdded = false;
         }
 
+        if (isAdded)
+            OnCurrentValueChanged();
+
         return isAdded;
     }
 
@@ -45,18 +48,21 @@ public class BaseLazyCollectionRepository<TCollection, TValue> : BaseLazyReposit
 
     public bool RemoveFromEnumerable(TValue value)
     {
-        bool isAdded;
+        bool isRemoved;
             
         try
         {
-            isAdded = removeFromEnumerable(value);
+            isRemoved = removeFromEnumerable(value);
         }
         catch (Exception)
         {
-            isAdded = false;
+            isRemoved = false;
         }
 
-        return isAdded;
+        if (isRemoved)
+            OnCurrentValueChanged();
+        
+        return isRemoved;
     }
 
     /// <summary>
@@ -84,7 +90,7 @@ public class BaseLazyCollectionRepository<TCollection, TValue> : BaseLazyReposit
 
     #region Properties
 
-    public new TCollection? CurrentValue
+    public new virtual TCollection? CurrentValue
     {
         get => (TCollection?)_currentValue?.Value;
         set
