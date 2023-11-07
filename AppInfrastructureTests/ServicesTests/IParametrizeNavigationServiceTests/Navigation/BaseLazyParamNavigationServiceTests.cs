@@ -1,4 +1,5 @@
-﻿using AppInfrastructure.Services.StoreServices.Parametrize;
+﻿using System;
+using AppInfrastructure.Services.StoreServices.Parametrize;
 using AppInfrastructure.Stores.DefaultStore;
 using AppInfrastructureTests.ServicesTests.IParametrizeNavigationServiceTests.Base;
 

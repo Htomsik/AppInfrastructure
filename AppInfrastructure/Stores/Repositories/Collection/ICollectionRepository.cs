@@ -1,4 +1,5 @@
-﻿using AppInfrastructure.Stores.Repositories.BaseTypes;
+﻿using System.Collections.Generic;
+using AppInfrastructure.Stores.Repositories.BaseTypes;
 
 namespace AppInfrastructure.Stores.Repositories.Collection;
 /// <summary>

@@ -1,4 +1,6 @@
-﻿namespace AppInfrastructure.Stores.DefaultStore;
+﻿using System;
+
+namespace AppInfrastructure.Stores.DefaultStore;
 
 /// <summary>
 ///     Simple generic some value storage

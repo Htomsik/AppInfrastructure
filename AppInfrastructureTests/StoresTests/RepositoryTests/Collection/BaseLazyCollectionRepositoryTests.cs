@@ -1,4 +1,5 @@
-﻿using AppInfrastructure.Stores.Repositories.Collection;
+﻿using System.Collections.Generic;
+using AppInfrastructure.Stores.Repositories.Collection;
 using AppInfrastructureTests.StoresTests.RepositoryTests.Collection.Base;
 
 namespace AppInfrastructureTests.StoresTests.RepositoryTests.Collection;

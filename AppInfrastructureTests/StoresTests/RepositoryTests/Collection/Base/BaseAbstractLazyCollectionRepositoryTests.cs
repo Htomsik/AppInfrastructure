@@ -1,4 +1,5 @@
-﻿using AppInfrastructure.Stores.Repositories.BaseTypes;
+﻿using System.Collections.Generic;
+using AppInfrastructure.Stores.Repositories.BaseTypes;
 using AppInfrastructure.Stores.Repositories.Collection;
 using AppInfrastructureTests.StoresTests.RepositoryTests.Default.BaseGenericLazyRepositoryTests.Base;
 

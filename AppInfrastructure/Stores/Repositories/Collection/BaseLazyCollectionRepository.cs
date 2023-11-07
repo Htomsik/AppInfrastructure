@@ -1,4 +1,7 @@
-﻿using AppInfrastructure.Stores.Repositories.BaseTypes;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using AppInfrastructure.Stores.Repositories.BaseTypes;
 
 namespace AppInfrastructure.Stores.Repositories.Collection;
 

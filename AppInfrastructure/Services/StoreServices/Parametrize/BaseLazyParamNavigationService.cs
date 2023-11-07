@@ -1,4 +1,5 @@
-﻿using AppInfrastructure.Services.NavigationServices.Navigation.Parametrize;
+﻿using System;
+using AppInfrastructure.Services.NavigationServices.Navigation.Parametrize;
 using AppInfrastructure.Stores.DefaultStore;
 
 namespace AppInfrastructure.Services.StoreServices.Parametrize;

@@ -1,4 +1,6 @@
-﻿namespace AppInfrastructure.Stores.DefaultStore;
+﻿using System;
+
+namespace AppInfrastructure.Stores.DefaultStore;
 
 /// <summary>
 ///     Base lazy generic realize for IStore.
