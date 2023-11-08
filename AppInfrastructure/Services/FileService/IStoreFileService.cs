@@ -30,4 +30,4 @@ public interface IStoreFileService
     public Task<bool> GetAsync();
 }
 
-public interface IStoreFileService<TStore, T> where TStore: IStore { }
+public interface IStoreFileService<TStore, T> : IStoreFileService where TStore: IStore { }
