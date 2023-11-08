@@ -1,5 +1,4 @@
-﻿using System;
-using AppInfrastructure.Stores.DefaultStore;
+﻿using AppInfrastructure.Stores.DefaultStore;
 
 namespace AppInfrastructure.Stores.Repositories.BaseTypes;
 

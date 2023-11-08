@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AppInfrastructure.Stores.DefaultStore;
+﻿namespace AppInfrastructure.Stores.DefaultStore;
 
 /// <summary>
 ///      Base lazy realize for IStore with custom default parameter.

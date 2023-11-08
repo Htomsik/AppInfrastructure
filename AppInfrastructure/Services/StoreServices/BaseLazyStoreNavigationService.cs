@@ -1,5 +1,4 @@
-﻿using System;
-using AppInfrastructure.Services.NavigationServices.Navigation;
+﻿using AppInfrastructure.Services.NavigationServices.Navigation;
 using AppInfrastructure.Stores.DefaultStore;
 
 namespace AppInfrastructure.Services.StoreServices;

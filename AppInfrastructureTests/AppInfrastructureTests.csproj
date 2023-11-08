@@ -9,6 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="fastJSON" Version="2.4.0.4" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
         <PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
         <PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
@@ -20,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="StoresTests\RepositoryTests\Default" />
+      <Folder Include="Stores\RepositoryTests\Default" />
     </ItemGroup>
 
 </Project>

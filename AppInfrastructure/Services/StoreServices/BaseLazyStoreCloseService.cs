@@ -1,5 +1,4 @@
-﻿using System;
-using AppInfrastructure.Services.NavigationServices.Close;
+﻿using AppInfrastructure.Services.NavigationServices.Close;
 using AppInfrastructure.Stores.DefaultStore;
 
 namespace AppInfrastructure.Services.StoreServices;
