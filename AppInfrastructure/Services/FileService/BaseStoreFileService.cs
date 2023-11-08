@@ -3,7 +3,7 @@ using AppInfrastructure.Stores.DefaultStore;
 
 namespace AppInfrastructure.Services.FileService;
 
-public class BaseStoreFileService<TStore, T> : IStoreFileService where TStore : IStore<T>
+public class BaseStoreFileService<TStore, T> : IStoreFileService<TStore, T> where TStore : IStore<T>
 {
     public string FileName { get; }
     public string DirectoryPath { get; }
@@ -22,7 +22,7 @@ public class BaseStoreFileService<TStore, T> : IStoreFileService where TStore : 
         DirectoryPath = directoryPath;
     }
     
-    public async Task<bool> SetAsync()
+    public virtual async Task<bool> SetAsync()
     {
         if (!IgnoreNullS && Store.CurrentValue is null)
         {
@@ -36,7 +36,7 @@ public class BaseStoreFileService<TStore, T> : IStoreFileService where TStore : 
         return true;
     }
 
-    public async Task<bool> GetAsync()
+    public virtual async Task<bool> GetAsync()
     {
         if (!FileExtension.IsFileExist(FileName, DirectoryPath))
         {

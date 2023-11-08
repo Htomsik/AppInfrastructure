@@ -1,4 +1,6 @@
-﻿namespace AppInfrastructure.Services.FileService;
+﻿using AppInfrastructure.Stores.DefaultStore;
+
+namespace AppInfrastructure.Services.FileService;
 
 public interface IStoreFileService
 {
@@ -27,3 +29,5 @@ public interface IStoreFileService
     /// </summary>
     public Task<bool> GetAsync();
 }
+
+public interface IStoreFileService<TStore, T> where TStore: IStore { }
